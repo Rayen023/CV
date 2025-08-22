@@ -1,0 +1,304 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+
+\begin{center}
+    {\Huge \scshape Rayen Ghali} \\ 
+    \vspace{1pt}
+    AI Research Assistant \textbar\ MASc Student \\ \vspace{1pt}
+\end{center}
+
+\vspace{-4.3\baselineskip} % Move up to align contact info with name
+\begin{flushright}
+    \raisebox{-0.2\height}{\faPhone\ +1 506-925-0056} \\
+    \href{mailto:rayenghali02@gmail.com}{\raisebox{-0.2\height}{\faEnvelope\ \underline{rayenghali02@gmail.com}}} \\
+    \href{https://linkedin.com/in/rayen-ghali-63718b1a5}{\raisebox{-0.2\height}{\faLinkedin\ \underline{rayen-ghali}}} \\
+    \href{https://github.com/Rayen023}{\raisebox{-0.2\height}{\faGithub\ \underline{Rayen023}}} \\
+\end{flushright}
+\vspace{-1.8\baselineskip} % Adjust the space here
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+     \resumeSubheading
+          {University of Moncton }
+          {Jan. 2024 -- Dec. 2025}
+          {Master of Applied Science (MASc)}
+        {New Brunswick, Canada }
+    \resumeSubheading
+      {National Institute of Applied Science and Technology (INSAT)}
+      {Sep. 2018 -- Oct 2023}
+      {Engineering studies in Instrumentation and Industrial Maintenance (Graduated with High Honors) }
+    {Tunis, Tunisia }
+
+%    \resumeSubheading
+%      {Pioneer High School of Sousse}
+%      {Sep. 2014 -- 2018}
+%      {Bachelor's degree in Mathematics (Graduated with Honors)}
+%      {Sousse, Tunisia}
+      
+\resumeSubHeadingListEnd
+
+    %\resumeSubHeadingListEnd
+\vspace{-1.5\baselineskip} % Adjust the space here
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{CEAAC (Centre d'études acadiennes Anselme-Chiasson)}{Jun 2024 -- Present}
+{AI Research Assistant}{New Brunswick, Canada}
+\resumeItemListStart
+\resumeItem{Implementing an open-access natural language processing system with agentic retrieval augmented generation for efficient querying of Acadian archives.}
+\resumeItem{Developing a ChatGPT-like interface to enhance accessibility of Acadian heritage for researchers and the public, leveraging large language models and knowledge graphs.}
+\resumeItem{Designing a knowledge management system to integrate expert archivists' insights into the AI-powered query process.}
+\resumeItem{Project website: chatacadien.ca}
+\resumeItem{Tech stack: Python, Langchain, Neo4j, Docker.}
+\resumeItemListEnd
+\resumeSubheading
+{LARIHS Lab, University of Moncton}{Dec 2023 -- Present}
+{AI Research Assistant}{New Brunswick, Canada}
+\resumeItemListStart
+\resumeItem{Collaborating on diverse projects, focusing on Robotics and AI research in computer vision for few-shot defect detection and Big Data Time Series Analysis.}
+\resumeItem{Tech stack: Python, PyTorch, Pandas, Bash.}
+\resumeItemListEnd
+
+
+\resumeSubheading
+{LARIHS Lab, University of Moncton}{May 2023 -- Aug 2023}
+{AI Research Intern}{New Brunswick, Canada}
+\resumeItemListStart
+\resumeItem{End-of-studies Project focused on 'Industrial surface defect detection employing computer vision and a KUKA arm robot.' Funded by Mitacs Globalink scholarship.}
+\resumeItem{Applying contrastive learning with YOLO and DETR based models for few-shot object detection for limited datasets of industrial surface defects for wood and steel products.}
+\resumeItem{Explore techniques to improve object detection of small-size defects.}
+\resumeItem{Tech stack: Python, PyTorch, Bash, SAHI}
+\resumeItemListEnd
+
+\resumeSubheading
+{TICDCE (Tunis International Center for Digital Cultural Economy)}{Jul 2022 -- Sept 2022}
+{Data Science Intern}{Hybrid}
+\resumeItemListStart
+\resumeItem{Create a recommendation system based on collaborative filtering for tourists interested in historical places in Tunisia.}
+\resumeItem{Explore different models of recommendation systems (Content-Based, Collaborative, or Hybrid).}
+\resumeItem{Apply Augmentation techniques for a private dataset containing numeric and categorical features.}
+\resumeItem{Tech stack: Python, TensorFlow, scikit-learn, SMOTE.}
+\resumeItemListEnd
+
+\resumeSubheading
+{STMicroelectronics | INSAT}{Feb 2022 - June 2022}
+{Embedded Systems Developer Intern}{Tunis, Tunisia}
+\resumeItemListStart
+\resumeItem{Load image decoding library libsail on top of Azure RTOS libraries.}
+\resumeItem{Contribute to the realization of a demo based on the ported libsail library running on an STM32 card.}
+\resumeItem{Tech Stack: C/C++, libsail, STM32CubeIDE, Git.}
+\resumeItemListEnd
+
+\resumeSubheading
+{ST2i (Société Tunisienne d'Informatique pour l'Ingénierie)}{Jul 2021 -- Sept 2021}
+{Back-End Developer Intern}{Hybrid}
+\resumeItemListStart
+\resumeItem{Study and compare different open-source IAM (or IdP) layers based on OAuth 2.0 for identity management and user access control.}
+\resumeItem{Implement the 'Keycloak' layer as a RESTful API in a micro-service architecture application.}
+\resumeItem{Tech Stack: JAVA, Angular, Spring Boot, PostgreSQL.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-1\baselineskip} % Adjust the space here
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\noindent
+\begin{minipage}[t]{0.49\textwidth}
+    \textbf{Programming Languages}: Python, JAVA \\[4pt]
+    \textbf{Databases}: MYSQL, MongoDB, PostgreSQL \\[4pt]
+    \textbf{Version Control}: Git, Docker \\[4pt]
+    \textbf{Deep Learning Frameworks}: Pytorch
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\textwidth}
+    \textbf{Data Science and Visualization Stack}:
+    \begin{itemize}[itemsep=4pt, topsep=4pt, partopsep=0pt, parsep=0pt, left=0pt] % Adjust the itemsep parameter
+        \item \textbf{Data Processing}: Pandas, Numpy, Scikit-Learn
+        \item \textbf{Data Visualization}: Matplotlib, Seaborn, Plotly
+        \item \textbf{Dashboards}: Streamlit
+    \end{itemize}
+\end{minipage}
+
+
+
+ \vspace{0.8pt}
+
+\section{Languages}
+\begin{multicols}{3}
+    \begin{itemize}[itemsep=0pt, parsep=0pt, left=0pt, label={}]
+        \item\small\columnbreak \textbf{Arabic :} Native
+        \item\small\columnbreak \textbf{French :} Bilingual
+        \item\small\columnbreak \textbf{English :} Full Professional Proficiency
+            \end{itemize}
+\end{multicols}
+
+ \vspace{-0.8pt}
+
+
+\iffalse
+
+%------RELEVANT COURSEWORK-------
+\section{Certifications}
+\begin{multicols}{4}
+    \begin{itemize}[itemsep=0pt, parsep=0pt, left=0pt, label={}]
+        \item\small\columnbreak \textbf{AI 900: Azure AI Fundamentals (Microsoft)}
+            \item Implement "Best practices" to develop test sets as well as DL applications with TensorFlow.
+        
+        \item\small\columnbreak \textbf{Google IT Automation with Python Specialization (Google)}
+            \item Use Git and GitHub
+            \item Troubleshoot and debug complex issues
+            \item Apply automation at scale
+        
+        \item\small\columnbreak \textbf{Structuring Machine Learning Projects (DeepLearning.AI)}
+            \item Demonstrate fundamental knowledge of ML, AI and related Microsoft Azure services.
+        
+        \item\small\columnbreak \textbf{Developing AI Applications on Azure (Coursera)}
+            \item Explore pre-trained ML models from Microsoft, and state-of-the-art solutions for computer vision and NLP
+    \end{itemize}
+\end{multicols}
+
+\fi
+
+
+
+\vspace{1pt}
+
+%-----------INVOLVEMENT---------------
+\section{Extracurricular Activities}
+    \resumeItemListStart
+        \resumeItem{Member, Aerobotix INSAT Club: Participated in various technical trainings and competitions, cultivating teamwork skills for collaborative projects.}
+        \resumeItem{Webmaster, IEEE INSAT IAS Club (Industry Applications Society): Contributed to the planning and organization of the event IAS Annual Meeting 2021. Designed and managed the introductory event website.}
+        \resumeItem{Kaggle Notebook expert: Actively participated in Kaggle competitions involving Natural Language Processing, Computer Vision, and Time Series. Kaggle profile at \href{https://www.kaggle.com/rayenghali023}{\raisebox{-0.2\height} {\faKaggle \underline{ rayenghali023}}} } \resumeItemListEnd
+
+
+
+
+\vspace{1pt}
+    
+\end{document}
