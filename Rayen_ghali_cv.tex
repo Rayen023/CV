@@ -35,7 +35,6 @@
   \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\titlerule \vspace{-4pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
@@ -66,16 +65,18 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]} 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=0.2em, topsep=0.2em, parsep=2pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
-
+% itemsep is the space between items
+% topsep is the space between title and first item
+% parsep is the space between items (all points)
 
 \begin{document}
 
 \begin{center}
-    {\Huge \scshape Rayen Ghali} \\ 
-    \vspace{2pt}
-    +1 506-925-0056 \textbar\ \href{mailto:rayenghali02@gmail.com}{\faEnvelope\ rayenghali02@gmail.com} \textbar\ \href{https://linkedin.com/in/rayen-ghali-63718b1a5}{\faLinkedin\ rayen-ghali} \textbar\ \href{https://github.com/Rayen023}{\faGithub\ Rayen023}
+    {\Huge \scshape Rayen Ghali} \\
+    \vspace{3pt}
+    +1 506-925-0056 \textbar\ \href{mailto:rayenghali02@gmail.com}{rayenghali02@gmail.com} \textbar\ \href{https://linkedin.com/in/rayenghali}{linkedin.com/in/rayenghali} \textbar\ \href{https://github.com/Rayen023}{github.com/Rayen023}
   \end{center}
 
 \section{Education}
@@ -87,85 +88,87 @@
 {New Brunswick, Canada}
 \resumeSubheading
 {University of Carthage}
-{Sep. 2018 -- Oct. 2023}
+{Sep. 2018 -- Sep. 2023}
 {National Engineering Diploma in Instrumentation and Industrial Maintenance \textbar\ National Institute of Applied Science and Technology (INSAT) \textbar\ Graduated with High Honours}
 {Tunis, Tunisia}
 \resumeSubHeadingListEnd
-      
+
+\section{Academic Projects}
+\textbf{Master's Thesis}
+\resumeItemListStart
+\resumeItem{Explored the use of Vision Language Action models (VLAs) for robotic manipulation tasks with industrial robots KUKA (get model) focusing on enhancing the robot's ability to understand and execute complex commands through visual and linguistic inputs.}
+\resumeItem{Fine tuned Vision language models using Q-LORA, Unsloth.}
+\resumeItem{Simulation envs, RL, evaluation datasets like libero, etc}
+\resumeItem{Explored quantization techniques and their impact on model performance.}
+\resumeItem{Explored tokenizers discrete vs continuous tokenizers for modeling robotic actions.}
+\resumeItem{For prototyping used the Nvidia Isaac gr00t family of models and the SO-101 mini robots with hf/lerobot library for dataset trajectories collection, motors calibration, fine-tuning and inference.}
+
+\resumeItemListEnd
 
 \section{Experience}
 \resumeSubHeadingListStart
-
 \resumeExperienceSubheading
-{CEAAC (Centre d'études acadiennes Anselme-Chiasson)}{Jun 2024 -- Nov 2024}
+{CFRIA, University of Moncton}{May 2025 -- Aug 2025}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
 \resumeItem{Implementing an open-access natural language processing system with agentic retrieval augmented generation for efficient querying of Acadian archives.}
 \resumeItem{Developing a ChatGPT-like interface to enhance accessibility of Acadian heritage for researchers and the public, leveraging large language models and knowledge graphs.}
 \resumeItem{Designing a knowledge management system to integrate expert archivists' insights into the AI-powered query process.}
-\resumeItem{Project website: chatacadien.ca}
+\resumeItem{Project website: Robots}
 \resumeItem{Tech stack: Python, Langchain, Neo4j, Docker.}
 \resumeItemListEnd
+
+
 \resumeExperienceSubheading
-{CFRIA, University of Moncton}{Dec 2023 -- Present}
+{CFRIA, University of Moncton}{Jan 2025 -- Apr 2025}
+{Research Assistant}{New Brunswick, Canada}
+\resumeItemListStart
+\resumeItem{Implementing an open-access natural language processing system with agentic retrieval augmented generation for efficient querying of Acadian archives.}
+\resumeItem{Developing a ChatGPT-like interface to enhance accessibility of Acadian heritage for researchers and the public, leveraging large language models and knowledge graphs.}
+\resumeItem{Designing a knowledge management system to integrate expert archivists' insights into the AI-powered query process.}
+\resumeItem{Project website: chatcapitalhumain.ca}
+\resumeItem{Tech stack: Python, Langchain, Neo4j, Docker.}
+\resumeItemListEnd
+
+
+\resumeExperienceSubheading
+{Centre d'études acadiennes Anselme-Chiasson (CEAAC)}{Jun 2024 -- Dec 2024}
+{Research Assistant}{New Brunswick, Canada}
+\resumeItemListStart
+\resumeItem{Implementing an open-access natural language processing system with agentic retrieval augmented generation for efficient querying of Acadian archives.}
+\resumeItem{Developing a ChatGPT-like interface to enhance accessibility of Acadian heritage for researchers and the public, leveraging large language models and knowledge graphs.}
+\resumeItem{Designing a knowledge management system to integrate expert archivists' insights into the AI-powered query process.}
+\resumeItem{Project website: chatacadien.ca, chatpatrimoineacadien.ca}
+\resumeItem{Tech stack: Python, Langchain, Neo4j, Docker.}
+\resumeItemListEnd
+
+
+\resumeExperienceSubheading
+{CFRIA, University of Moncton}{Apr 2023 -- Jun 2024}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
 \resumeItem{Collaborating on diverse projects, focusing on Robotics and Research in computer vision for few-shot defect detection and Big Data Time Series Analysis.}
+\resumeItem{Accepted/Presented conference papers: ICRA 2024, IROS 2024, ICDM 2024.}
 \resumeItem{Tech stack: Python, PyTorch, Pandas, Bash.}
-\resumeItemListEnd
-
-
-\resumeExperienceSubheading
-{CFRIA, University of Moncton}{May 2023 -- Aug 2023}
-{Research Intern}{New Brunswick, Canada}
-\resumeItemListStart
 \resumeItem{End-of-studies Project focused on 'Industrial surface defect detection employing computer vision and a KUKA arm robot.' Funded by Mitacs Globalink scholarship.}
 \resumeItem{Applying contrastive learning with YOLO and DETR based models for few-shot object detection for limited datasets of industrial surface defects for wood and steel products.}
 \resumeItem{Explore techniques to improve object detection of small-size defects.}
 \resumeItem{Tech stack: Python, PyTorch, Bash, SAHI}
 \resumeItemListEnd
 
-\resumeExperienceSubheading
-{TICDCE (Tunis International Center for Digital Cultural Economy)}{Jul 2022 -- Sept 2022}
-{Data Science Intern}{Hybrid}
-\resumeItemListStart
-\resumeItem{Create a recommendation system based on collaborative filtering for tourists interested in historical places in Tunisia.}
-\resumeItem{Explore different models of recommendation systems (Content-Based, Collaborative, or Hybrid).}
-\resumeItem{Apply Augmentation techniques for a private dataset containing numeric and categorical features.}
-\resumeItem{Tech stack: Python, TensorFlow, scikit-learn, SMOTE.}
-\resumeItemListEnd
-
-\resumeExperienceSubheading
-{STMicroelectronics | INSAT}{Feb 2022 - June 2022}
-{Embedded Systems Developer Intern}{Tunis, Tunisia}
-\resumeItemListStart
-\resumeItem{Load image decoding library libsail on top of Azure RTOS libraries.}
-\resumeItem{Contribute to the realization of a demo based on the ported libsail library running on an STM32 card.}
-\resumeItem{Tech Stack: C/C++, libsail, STM32CubeIDE, Git.}
-\resumeItemListEnd
-
-\resumeExperienceSubheading
-{ST2i (Société Tunisienne d'Informatique pour l'Ingénierie)}{Jul 2021 -- Sept 2021}
-{Back-End Developer Intern}{Hybrid}
-\resumeItemListStart
-\resumeItem{Study and compare different open-source IAM (or IdP) layers based on OAuth 2.0 for identity management and user access control.}
-\resumeItem{Implement the 'Keycloak' layer as a RESTful API in a micro-service architecture application.}
-\resumeItem{Tech Stack: JAVA, Angular, Spring Boot, PostgreSQL.}
-\resumeItemListEnd
-
 \resumeSubHeadingListEnd
 
 \section{Technical Skills}
 \textbf{Languages}: Python, SQL \\
-\textbf{Technologies}: Git, Docker, Pytorch, MongoDB, Streamlit, Langgraph
+\textbf{Technologies}: Linux, Docker, Git, MongoDB, Streamlit, PyTorch, Langchain
 
 \section{Languages}
 \begin{multicols}{3}
     \begin{itemize}[itemsep=0pt, parsep=0pt, left=0pt, label={}]
         \item\small\columnbreak \textbf{Arabic :} Native
         \item\small\columnbreak \textbf{French :} Bilingual
-        \item\small\columnbreak \textbf{English :} Full Professional Proficiency
+        \item\small\columnbreak \textbf{English :} Proficient
             \end{itemize}
 \end{multicols}
-    
+
 \end{document}
