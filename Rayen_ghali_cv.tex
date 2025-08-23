@@ -3,13 +3,12 @@
 
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
+\usepackage{lmodern}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
@@ -27,8 +26,6 @@
 \addtolength{\topmargin}{-.7in}
 \addtolength{\textheight}{1.4in}
 
-\urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
@@ -36,7 +33,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+}{}{0em}{}[\titlerule \vspace{-4pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -51,27 +48,25 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
+    \begin{tabular*}{1.0\textwidth}[t]{@{}p{0.72\textwidth}@{\extracolsep{\fill}}r@{}}
+      \textbf{\raggedright #1} & \textbf{\small #2} \\
+      \textit{\small\raggedright #3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
+\newcommand{\resumeExperienceSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{@{}p{0.72\textwidth}@{\extracolsep{\fill}}r@{}}
+      \textbf{\raggedright #3} & \textbf{\small #2} \\
+      \textit{\small\raggedright #1} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemi{\textbullet}
 
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]} 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
 
@@ -85,31 +80,25 @@
 
 \section{Education}
 \resumeSubHeadingListStart
-     \resumeSubheading
-          {University of Moncton }
-          {Jan. 2024 -- Dec. 2025}
-          {Master of Applied Science (MASc) - CGPA: 4.15/4.3}
-        {New Brunswick, Canada }
-    \resumeSubheading
-      {National Institute of Applied Science and Technology (INSAT)}
-      {Sep. 2018 -- Oct 2023}
-      {Engineering studies in Instrumentation and Industrial Maintenance - High Honors }
-    {Tunis, Tunisia }
-
-%    \resumeSubheading
-%      {Pioneer High School of Sousse}
-%      {Sep. 2014 -- 2018}
-%      {Bachelor's degree in Mathematics (Graduated with Honors)}
-%      {Sousse, Tunisia}
-      
+\resumeSubheading
+{University of Moncton}
+{Jan 2024 -- Exp. Dec 2025}
+{Master of Applied Science (MASc) \textbar\ Faculty of Engineering \textbar\ CGPA: 4.15/4.3}
+{New Brunswick, Canada}
+\resumeSubheading
+{University of Carthage}
+{Sep. 2018 -- Oct. 2023}
+{National Engineering Diploma in Instrumentation and Industrial Maintenance \textbar\ National Institute of Applied Science and Technology (INSAT) \textbar\ Graduated with High Honours}
+{Tunis, Tunisia}
 \resumeSubHeadingListEnd
+      
 
 \section{Experience}
 \resumeSubHeadingListStart
 
-\resumeSubheading
+\resumeExperienceSubheading
 {CEAAC (Centre d'études acadiennes Anselme-Chiasson)}{Jun 2024 -- Nov 2024}
-{AI Research Assistant}{New Brunswick, Canada}
+{Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
 \resumeItem{Implementing an open-access natural language processing system with agentic retrieval augmented generation for efficient querying of Acadian archives.}
 \resumeItem{Developing a ChatGPT-like interface to enhance accessibility of Acadian heritage for researchers and the public, leveraging large language models and knowledge graphs.}
@@ -117,18 +106,18 @@
 \resumeItem{Project website: chatacadien.ca}
 \resumeItem{Tech stack: Python, Langchain, Neo4j, Docker.}
 \resumeItemListEnd
-\resumeSubheading
-{LARIHS Lab, University of Moncton}{Dec 2023 -- Present}
-{AI Research Assistant}{New Brunswick, Canada}
+\resumeExperienceSubheading
+{CFRIA, University of Moncton}{Dec 2023 -- Present}
+{Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
-\resumeItem{Collaborating on diverse projects, focusing on Robotics and AI research in computer vision for few-shot defect detection and Big Data Time Series Analysis.}
+\resumeItem{Collaborating on diverse projects, focusing on Robotics and Research in computer vision for few-shot defect detection and Big Data Time Series Analysis.}
 \resumeItem{Tech stack: Python, PyTorch, Pandas, Bash.}
 \resumeItemListEnd
 
 
-\resumeSubheading
-{LARIHS Lab, University of Moncton}{May 2023 -- Aug 2023}
-{AI Research Intern}{New Brunswick, Canada}
+\resumeExperienceSubheading
+{CFRIA, University of Moncton}{May 2023 -- Aug 2023}
+{Research Intern}{New Brunswick, Canada}
 \resumeItemListStart
 \resumeItem{End-of-studies Project focused on 'Industrial surface defect detection employing computer vision and a KUKA arm robot.' Funded by Mitacs Globalink scholarship.}
 \resumeItem{Applying contrastive learning with YOLO and DETR based models for few-shot object detection for limited datasets of industrial surface defects for wood and steel products.}
@@ -136,7 +125,7 @@
 \resumeItem{Tech stack: Python, PyTorch, Bash, SAHI}
 \resumeItemListEnd
 
-\resumeSubheading
+\resumeExperienceSubheading
 {TICDCE (Tunis International Center for Digital Cultural Economy)}{Jul 2022 -- Sept 2022}
 {Data Science Intern}{Hybrid}
 \resumeItemListStart
@@ -146,7 +135,7 @@
 \resumeItem{Tech stack: Python, TensorFlow, scikit-learn, SMOTE.}
 \resumeItemListEnd
 
-\resumeSubheading
+\resumeExperienceSubheading
 {STMicroelectronics | INSAT}{Feb 2022 - June 2022}
 {Embedded Systems Developer Intern}{Tunis, Tunisia}
 \resumeItemListStart
@@ -155,7 +144,7 @@
 \resumeItem{Tech Stack: C/C++, libsail, STM32CubeIDE, Git.}
 \resumeItemListEnd
 
-\resumeSubheading
+\resumeExperienceSubheading
 {ST2i (Société Tunisienne d'Informatique pour l'Ingénierie)}{Jul 2021 -- Sept 2021}
 {Back-End Developer Intern}{Hybrid}
 \resumeItemListStart
