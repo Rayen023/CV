@@ -1,4 +1,3 @@
-%------------------------
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage[empty]{fullpage}
@@ -32,13 +31,11 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\titlerule \vspace{-4pt}]
+  \vspace{-12pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\titlerule \vspace{-8pt}]
 
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -47,14 +44,14 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{@{}p{0.72\textwidth}@{\extracolsep{\fill}}r@{}}
+    \begin{tabular*}{1.0\textwidth}[t]{@{}p{0.78\textwidth}@{\extracolsep{\fill}}r@{}}
       \textbf{\raggedright #1} & \textbf{\small #2} \\
       \textit{\small\raggedright #3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeExperienceSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-4pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{@{}p{0.72\textwidth}@{\extracolsep{\fill}}r@{}}
       \textbf{\raggedright #3} & \textbf{\small #2} \\
       \textit{\small\raggedright #1} & \textit{\small #4} \\
@@ -65,8 +62,8 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]} 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=0.2em, topsep=0.2em, parsep=2pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=0.1em, topsep=0.1em, parsep=0.5pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 % itemsep is the space between items
 % topsep is the space between title and first item
 % parsep is the space between items (all points)
@@ -82,18 +79,19 @@
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
-{University of Moncton}
-{Jan 2024 -- Exp. Dec 2025}
-{Master of Applied Science (MASc) \textbar\ Faculty of Engineering \textbar\ CGPA: 4.15/4.3}
+{University of Moncton, Faculty of Engineering}
+{Expected Dec 2025}
+{Master of Applied Science (MASc) \textbar\ CGPA: 4.15/4.3}
 {New Brunswick, Canada}
+\vspace{-4pt}
 \resumeSubheading
-{University of Carthage}
-{Sep. 2018 -- Sep. 2023}
-{National Engineering Diploma in Instrumentation and Industrial Maintenance \textbar\ National Institute of Applied Science and Technology (INSAT) \textbar\ Graduated with High Honours}
+{University of Carthage, National Institute of Applied Science and Technology}
+{Sept 2023}
+{Engineering Diploma in Instrumentation and Industrial Maintenance \textbar\ Graduated with High Honours}
 {Tunis, Tunisia}
 \resumeSubHeadingListEnd
 
-\section{Academic Projects}
+\section{Projects}
 \textbf{Master's Thesis}
 \resumeItemListStart
 \resumeItem{Explored the use of Vision Language Action models (VLAs) for robotic manipulation tasks with industrial robots KUKA (get model) focusing on enhanced robot ability to understand and execute complex commands through visual and linguistic inputs.}
@@ -108,7 +106,7 @@
 \section{Experience}
 \resumeSubHeadingListStart
 \resumeExperienceSubheading
-{CFRIA, University of Moncton}{May 2025 -- Aug 2025}
+{CFRIA, University of Moncton}{May 2025 – Aug 2025}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
 \resumeItem{Implemented an open-access natural language processing system with agentic retrieval augmented generation for efficient querying of Acadian archives.}
@@ -120,7 +118,7 @@
 \resumeItemListEnd
 
 \resumeExperienceSubheading
-{CFRIA, University of Moncton}{Jan 2025 -- Apr 2025}
+{CFRIA, University of Moncton}{Jan 2025 – Apr 2025}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
 \resumeItem{Implemented an open-access natural language processing system with agentic retrieval augmented generation for efficient querying of Acadian archives.}
@@ -132,7 +130,7 @@
 
 
 \resumeExperienceSubheading
-{Centre d'études acadiennes Anselme-Chiasson (CEAAC)}{Jun 2024 -- Dec 2024}
+{Centre d'études acadiennes Anselme-Chiasson (CEAAC)}{June 2024 – Dec 2024}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
 \resumeItem{Implemented an open-access natural language processing system with agentic retrieval augmented generation for efficient querying of Acadian archives.}
@@ -144,7 +142,7 @@
 
 
 \resumeExperienceSubheading
-{CFRIA, University of Moncton}{Apr 2023 -- Jun 2024}
+{CFRIA, University of Moncton}{Apr 2023 – June 2024}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
 \resumeItem{Collaborated on diverse projects, focused on Robotics and Research in computer vision for few-shot defect detection and Big Data Time Series Analysis.}
@@ -157,8 +155,8 @@
 \resumeItemListEnd
 
 \resumeExperienceSubheading
-{Tunis International Center for Digital Cultural Economy (TICDCE)}{Jul 2022 -- Sept 2022}
-{Data Science Intern}{Hybrid}
+{Tunis International Center for Digital Cultural Economy (TICDCE)}{July 2022 – Sept 2022}
+{Data Science Intern}{Tunis, Tunisia (Remote)}
 \resumeItemListStart
 \resumeItem{Create a recommendation system based on collaborative filtering for tourists interested in historical places in Tunisia.}
 \resumeItem{Explore different models of recommendation systems (Content-Based, Collaborative, or Hybrid).}
@@ -170,9 +168,9 @@
 
 \resumeSubHeadingListEnd
 
-\section{Technical Skills}
+\section{Skills}
 \textbf{Languages}: Python, SQL \\
-\textbf{Technologies}: Linux, Docker, Git, MongoDB, Streamlit, PyTorch, Langchain
+\textbf{Technologies}: Docker, Git, Streamlit, PyTorch, Langchain
 
 \section{Languages}
 \begin{multicols}{3}
