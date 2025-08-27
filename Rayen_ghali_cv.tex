@@ -1,40 +1,38 @@
 \documentclass[letterpaper,11pt]{article}
-
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\usepackage{lmodern}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
 
 
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+% \usepackage{fontawesome5}
+% \usepackage{lmodern}
+% \usepackage{multicol}
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+% \input{glyphtounicode}
+% \setlength{\multicolsep}{-3.0pt}
+% \setlength{\columnsep}{-1pt}
+% \addtolength{\evensidemargin}{-0.5in}
+% \raggedbottom
+% \setlength{\tabcolsep}{0in}
+% \pdfgentounicode=1
 
 \addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
 \addtolength{\topmargin}{-.7in}
 \addtolength{\textheight}{1.4in}
-
-\raggedbottom
 \raggedright
-\setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-12pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\titlerule \vspace{-8pt}]
-
-\pdfgentounicode=1
 
 \newcommand{\resumeItem}[1]{
   \item\small{
@@ -62,7 +60,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]} 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=0.1em, topsep=0.3em, parsep=0.5pt]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=0.1em, topsep=0.5em, parsep=0.6pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 % itemsep is the space between items
 % topsep is the space between title and first item
@@ -83,46 +81,50 @@
 {Expected Dec 2025}
 {Master of Applied Science (MASc) \textbar\ CGPA: 4.15/4.3}
 {New Brunswick, Canada}
-\vspace{-4pt}
+\vspace{-1pt}
 \resumeSubheading
-{University of Carthage, National Institute of Applied Science and Technology}
+{University of Carthage, National Institute of Applied Science and Technology (INSAT)}
 {Sept 2023}
 {Engineering Diploma in Instrumentation and Industrial Maintenance \textbar\ Graduated with High Honours}
 {Tunis, Tunisia}
 \resumeSubHeadingListEnd
+\vspace{1pt}
 
 \section{Projects}
-\textbf{Master's Thesis}
+\vspace{5pt}
+\resumeSubHeadingListStart
+\resumeExperienceSubheading
+{Master's Thesis}{}
+{Vision Language Action Models for Industrial Robotic Manipulation}{}
 \resumeItemListStart
-\resumeItem{Explored the use of Vision Language Action models (VLAs) for robotic manipulation tasks with industrial robots KUKA (get model) focusing on enhanced robot ability to understand and execute complex commands through visual and linguistic inputs.}
-\resumeItem{Fine-tuned Vision language models using Q-LORA, Unsloth.}
-\resumeItem{Developed simulation environments, reinforcement learning, and evaluation datasets like libero.}
-\resumeItem{Explored quantization techniques and their impact on model performance.}
-\resumeItem{Explored tokenizers discrete vs continuous tokenizers for modeling robotic actions.}
-\resumeItem{Prototyped using the Nvidia Isaac gr00t family of models and the SO-101 mini robots with hf/lerobot library for dataset trajectories collection, motors calibration, fine-tuning and inference.}
-
+\resumeItem{Applied parameter-efficient fine-tuning (Q-LORA) to pretrained VLMs to generate discrete action tokens for robotic control using the Unsloth framework and OpenX-Embodiment dataset}
+\resumeItem{Investigated trade-offs between discrete action tokenization and continuous action generation using diffusion-based decoders for robotic manipulation}
+\resumeItem{Fine-tuned pretrained VLA models (NVIDIA Isaac GR00T N1.5 and SmolVLA) on manually collected datasets with imitation learning. Evaluated on real-world tasks using a SO-ARM101 robotic arm}
+\resumeItem{Explored reinforcement learning methods to improve visuomotor policy generalization}
+\resumeItem{Executed and managed multi-GPU training jobs through the CCDB Canada Compute platform}
 \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 \section{Experience}
+\vspace{5pt}
 \resumeSubHeadingListStart
 \resumeExperienceSubheading
 {CFRIA, University of Moncton}{May 2025 – Aug 2025}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
-\resumeItem{Architected a stateful LangGraph agent for natural language robot control (KUKA KR 50 R2100), featuring persistent conversational memory and tools for pick-and-place, Cartesian, and joint space movements.}
-\resumeItem{Designed and implemented a multimodal pipeline processing continuous audio streams with Voice Activity Detection for speech segmentation and efficient transcription, achieving $<$ 2.6s end-to-end latency.}
-\resumeItem{Implemented a robust error recovery system with safety checks, rollback to safe state, and automatic retry mechanisms grounded in robot state with real-time voice feedback.}
-\resumeItem{Co-authored: "LLM-driven agent for speech-enabled control of industrial robots: A case study in snow-crab quality inspection" published in Results in Engineering 2025.}
-\resumeItem{Tech stack: Python, LangGraph, Google GenAI, KRL}
+\resumeItem{Architected a stateful LangGraph agent for natural language robot control (KUKA KR 50 R2100), featuring persistent conversational memory and tools for pick-and-place, Cartesian, and joint space movements}
+\resumeItem{Designed and implemented a multimodal pipeline processing continuous audio streams with Voice Activity Detection for speech segmentation and efficient transcription, achieving $<$ 2.6s end-to-end latency}
+\resumeItem{Implemented a robust error recovery system with safety checks, rollback to safe state, automatic retry mechanisms grounded in robot state and real-time voice feedback}
+\resumeItem{Co-authored: "LLM-driven agent for speech-enabled control of industrial robots: A case study in snow-crab quality inspection" published in Results in Engineering 2025}
 \resumeItemListEnd
 
 \resumeExperienceSubheading
 {CFRIA, University of Moncton}{Jan 2025 – Apr 2025}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
-\resumeItem{Talk chatcapitalhumain so  postgresql, human-in-the-loop, visualizing graphs from llm outputs etc..  focus on design.}
-\resumeItem{Project website: \href{https://chatcapitalhumain.ca}{chatcapitalhumain.ca}}
-\resumeItem{Tech stack: Python, Streamlit, LangGraph, Pandas, SQL, Supabase}
+\resumeItem{Migrated 15 years of Acadian student survey data from 7 schools, converting Excel files to a PostgreSQL database}
+\resumeItem{Built a multi-agent swarm workflow using LangGraph with human-in-the-loop validation for natural language queries}
+\resumeItem{Developed a Streamlit web application with automated plotting for query results (\href{https://chatcapitalhumain.ca}{chatcapitalhumain.ca})}
 \resumeItemListEnd
 
 
@@ -130,38 +132,28 @@
 {Centre d'études acadiennes Anselme-Chiasson (CEAAC)}{June 2024 – Dec 2024}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
-\resumeItem{Implemented an open-access natural language processing system with agentic retrieval augmented generation for efficient querying of Acadian archives.}
-\resumeItem{talk rag, hyde, evals RAGAS,  }
-\resumeItem{Developed a ChatGPT-like interface to enhanced accessibility of Acadian heritage for researchers and the public, leveraged large language models and knowledge graphs.}
-\resumeItem{Designed a knowledge management system to integrate expert archivists' insights into the AI-powered query process.}
-\resumeItem{Project website: \href{https://chatacadien.ca}{chatacadien.ca}, \href{https://chatpatrimoineacadien.ca}{chatpatrimoineacadien.ca}}
-\resumeItem{Tech stack: Python, Streamlit, Langchain, Neo4j, Pinecone, MongoDB, Cloudflare R2}
+\resumeItem{Developed RAG-based conversational agent for querying Acadian genealogical records (1700-1900) (\href{https://chatacadien.ca}{chatacadien.ca})}
+\resumeItem{Built Streamlit web application for archival image search with VLM-generated descriptions (\href{https://chatpatrimoineacadien.ca}{chatpatrimoineacadien.ca})}
+\resumeItem{Implemented advanced RAG techniques (parent-child chunking, reranking, context compression, Hyde) to handle homonym challenges in large-scale unstructured text data and reduce hallucinations}
+\resumeItem{Evaluated system performance using RAGAS metrics (faithfulness, context precision/recall) on real user interactions}
 \resumeItemListEnd
-
 
 \resumeExperienceSubheading
 {CFRIA, University of Moncton}{Apr 2023 – June 2024}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
-\resumeItem{Benchmarked  modern object detection models (YOLOv5-v9, RT-DETR) on industrial datasets identifying optimal performance-speed balance.}
-\resumeItem{Developed SSL-YOLO, a few-shot learning framework combining contrastive self-supervised pre-training with YOLOv8.}
+\resumeItem{Benchmarked modern object detection models (YOLOv5-v9, RT-DETR) on industrial datasets, identifying optimal performance-speed balance}
+\resumeItem{Developed SSL-YOLO, a few-shot learning framework combining contrastive self-supervised pre-training with YOLOv8}
 \resumeItem{Co-authored and presented conference papers "Real-time defect detection systems for steel and wood inspection", IEEE CECCE 2024 and "Benchmarking few-shot learning techniques for steel surface defect detection", IEEE SWC 2025}
-\resumeItem{Tech stack: Python, PyTorch, Ultralytics}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 \section{Skills}
 \textbf{Languages}: Python, SQL \\
-\textbf{Technologies}: Docker, Git, Streamlit, PyTorch, Langchain
+\textbf{Technologies}: Streamlit, PyTorch, transformers, Langchain, Google GenAI, LeRobot, Git, Docker, Supabase
 
 \section{Languages}
-\begin{multicols}{3}
-    \begin{itemize}[itemsep=0pt, parsep=0pt, left=0pt, label={}]
-        \item\small\columnbreak \textbf{Arabic :} Native
-        \item\small\columnbreak \textbf{French :} Bilingual
-        \item\small\columnbreak \textbf{English :} Proficient
-            \end{itemize}
-\end{multicols}
+\textbf{Arabic:} Native \textbar\ \textbf{French:} Bilingual \textbar\ \textbf{English:} Proficient
 
 \end{document}
