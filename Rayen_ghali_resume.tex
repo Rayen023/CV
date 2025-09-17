@@ -1,0 +1,141 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\raggedright
+
+\titleformat{\section}{
+  \vspace{-12pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\titlerule \vspace{-8pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{@{}p{0.78\textwidth}@{\extracolsep{\fill}}r@{}}
+      \textbf{\raggedright #1} & \textbf{\small #2} \\
+      \textit{\small\raggedright #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeExperienceSubheading}[4]{
+  \vspace{-4pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{@{}p{0.72\textwidth}@{\extracolsep{\fill}}r@{}}
+      \textbf{\raggedright #3} & \textbf{\small #2} \\
+      \textit{\small\raggedright #1} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{\textbullet}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]} 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=0.1em, topsep=0.5em, parsep=0.6pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+% itemsep is the space between items
+% topsep is the space between title and first item
+% parsep is the space between items (all points)
+
+\begin{document}
+
+\begin{center}
+    {\Huge \scshape Rayen Ghali} \\
+    \vspace{3pt}
+    +1 506-925-0056 \textbar\ \href{mailto:rayenghali02@gmail.com}{rayenghali02@gmail.com} \textbar\ \href{https://linkedin.com/in/rayenghali}{linkedin.com/in/rayenghali} \textbar\ \href{https://github.com/Rayen023}{github.com/Rayen023}
+  \end{center}
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of Moncton, Faculty of Engineering}
+{Expected Dec 2025}
+{Master of Applied Science (MASc) \textbar\ CGPA: 4.15/4.3}
+{New Brunswick, Canada}
+\vspace{-1pt}
+\resumeSubheading
+{University of Carthage, National Institute of Applied Science and Technology (INSAT)}
+{Sept 2023}
+{Engineering Diploma in Instrumentation and Industrial Maintenance \textbar\ Graduated with High Honours}
+{Tunis, Tunisia}
+\resumeSubHeadingListEnd
+\vspace{1pt}
+
+\section{Projects}
+\vspace{5pt}
+\resumeSubHeadingListStart
+\resumeExperienceSubheading
+{Master's Thesis}{}
+{Vision Language Action Models for Industrial Robotic Manipulation}{}
+\resumeItemListStart
+\resumeItem{Employed parameter-efficient fine-tuning to adapt vision–language models for generating discrete robotic action tokens}
+\resumeItem{Benchmarked the tokenization method against continuous action generation via diffusion decoders to analyze accuracy and latency trade-offs}
+\resumeItem{Collected task demonstrations and fine-tuned vision–language–action (VLA) policies with imitation learning}
+\resumeItem{Evaluated trained models' success rates on real-world tasks using a SO-101 robotic arm}
+\resumeItem{Explored Reinforcement Learning (RL) methods in simulation environments to improve policy generalization}\resumeItem{Orchestrated multi-GPU training jobs through the CCDB Canada Compute platform}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Experience}
+\vspace{5pt}
+\resumeSubHeadingListStart
+\resumeExperienceSubheading
+{CFRIA, University of Moncton}{May 2025 – Aug 2025}
+{Research Assistant}{New Brunswick, Canada}
+\resumeItemListStart
+\resumeItem{Engineered a multimodal agent using LangGraph to control an industrial KUKA robot via natural language (text and speech)}
+\resumeItem{Integrated persistent conversational memory and a toolset for pick-and-place, Cartesian, and joint space movements, achieving < 2.6s end-to-end latency}
+\resumeItem{Implemented a robust error recovery system featuring safety checks, rollback, automatic retries, and real-time voice feedback}
+\resumeItem{Co-authored: "LLM-driven agent for speech-enabled control of industrial robots: A case study in snow-crab quality inspection" published in Results in Engineering 2025}
+\resumeItemListEnd
+
+\resumeExperienceSubheading
+{CFRIA, University of Moncton}{Jan 2025 – Apr 2025}
+{Research Assistant}{New Brunswick, Canada}
+\resumeItemListStart
+\resumeItem{Migrated 15 years of Acadian student survey data from 7 schools, converting Excel files to a centralized PostgreSQL database}
+\resumeItem{Built a multi-agent workflow using LangGraph with human-in-the-loop validation for natural language queries}
+\resumeItem{Developed a Streamlit web application with automated plotting for query results (\href{https://chatcapitalhumain.ca}{chatcapitalhumain.ca}); validated with research personnel and adopted to streamline survey data analysis}
+\resumeItemListEnd
+
+
+\resumeExperienceSubheading
+{Centre d'études acadiennes Anselme-Chiasson (CEAAC)}{June 2024 – Dec 2024}
+{Research Assistant}{New Brunswick, Canada}
+\resumeItemListStart
+\resumeItem{Developed a RAG-based conversational agent for querying historical Acadian genealogical records (1700-1900), reducing average archivist search time from \textasciitilde{}15 minutes per query to under 30 seconds (\href{https://chatacadien.ca}{chatacadien.ca})}
+\resumeItem{Engineered entity-centric chunking and context grounding solutions to disambiguate individuals with identical names in unstructured genealogical text, mitigating a primary cause of model hallucinations}
+\resumeItem{Evaluated and validated the system for faithfulness and context precision/recall on a dataset of real user interactions}
+\resumeItem{Built a complementary web application for archival image search with VLM-generated descriptions(\href{https://chatpatrimoineacadien.ca}{chatpatrimoineacadien.ca})}
+\resumeItemListEnd
+
+\resumeExperienceSubheading
+{CFRIA, University of Moncton}{Apr 2023 – June 2024}
+{Research Assistant}{New Brunswick, Canada}
+\resumeItemListStart
+\resumeItem{Benchmarked modern object detection models on industrial surface-defect datasets evaluating the performance-speed tradeoff}
+\resumeItem{Developed SSL-YOLO, a few-shot learning framework combining contrastive self-supervised pre-training with YOLOv8}
+\resumeItem{Co-authored and presented conference papers "Real-time defect detection systems for steel and wood inspection", IEEE CECCE 2024 and "Benchmarking few-shot learning techniques for steel surface defect detection", IEEE SWC 2025}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Skills}
+\textbf{Languages}: Python, SQL \\
+\textbf{Technologies}: Streamlit, PyTorch, Transformers, LangChain, Google GenAI, LeRobot, Git, Docker, Supabase
+
+\section{Languages}
+\textbf{Arabic:} Native \textbar\ \textbf{French:} Bilingual \textbar\ \textbf{English:} Proficient
+
+\end{document}
